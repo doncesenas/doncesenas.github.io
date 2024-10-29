@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Carter+One&family=Kenia&family=Limelight&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Global*/
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*Sirve para deslizar cuando se hace clic en los links del menú*/
+    scroll-behavior: smooth;
+}
+
+/*Menu*/
+.container-header {
+    background: #1e2326;
+    position: fixed;
+    /*El Fixed nos sirve para que este elemento se quede anclado
+    o permite que al deslizar hacia abajo se quede fijo.*/
+    width: 100%;
+    top: 0;
+    /* Coloca el elemento en la parte superior de la ventana del navegador*/
+    left: 0;
+    /*Alinea el elemento al borde izquierdo de la ventana del navegado*/
+}
+
+/*Header*/
+.container-header header {
+    max-width: 1100px;
+    /*Establecer un valor maximo evita que el elemento se expanda mas alla
+    del valor asignado, esto ayuda a que el contenido no se estire demasiado y permanezca legible.*/
+    margin: auto;
+    /*centra de forma horizontal el elemento dentro del div*/
+    display: flex;
+    /*El flex ordena los elementos en linea recta*/
+    justify-content: space-around;
+    /*Deja un espacio entre un elemento con un margen igual para
+    todos*/
+    align-items: center;
+    /*Ordena de forma vertical los elementos secundarios al valor
+    que le asignemos, en este caso al centro*/
+    padding: 15px 20px;
+    /*Es para el espacio interno de este elemento, el primer valor
+    15px hace el espaciado por encima y por debajo, y el 20 hace el espaciado hacia los
+    lados*/
+}
+
+.container-header header .logo a {
+    font-family: 'Carter One';
+    letter-spacing: 10px;
+    /*Hace un espaciado depende del valor que le asignemos, aplica para elementos p y span*/
+    font-size: 40px;
+    color: #F98E23;
+    /*Color para Titulos*/
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container-header header ul {
+    display: flex;
+    /*El flex ordena los elementos en linea recta*/
+    list-style: none;
+    /*Permite asignar diferentes estilo a las etiquetas de lista, para este caso, no le daremos
+    un valor*/
+}
+
+.container-header header nav ul li a {
+    color: white;
+    /*Esta propiedad de color define el color del texto en blanco, unicamente
+    aplica para la etiqueta a*/
+    margin: 10px 20px;
+    padding: 5px;
+    transition: .5s;
+    /*permite asignar un valor en segundos para la animacion cuando activamos el 
+    hover*/
+    text-decoration: none;
+}
+
+.container-header header nav ul li a:hover {
+    color: #FEB44A;
+    /*Color para la propiedad hover*/
+}
+
+/*Revisar por que no funciona :c*/
+.nav-responsive {
+    background-color: #F98E23;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+
+}
+
+/*Seccion de inicio*/
+.home {
+    background: linear-gradient(to top, rgba(30, 35, 38, .5), rgba(30, 35, 38, 1)),
+        url(code/images/background.jpg);
+    /*Esta propiedad es para darle un estilo de gradient a la imagen, se coloca lo siguiente
+       un gradiente lineal que va de abajo hacia arriba (to top)
+       pasa de un tono oscuro semitransparente rgba(30, 35, 38, .5)
+       para que el segundo valor sea un tono completamente oscuro rgba(30, 35, 38, 1)*/
+
+    /*se recomienda utilizar el rgba ya que este al final el valor que se le asigna
+       es el valor de la transparencia | by chatgpt*/
+    background-size: cover;
+    /*Permite que la imagen se vea completa sin importar las dimensiones de la misma*/
+    height: 850px;
+    color: white;
+    display: flex;
+    /*Permite activar el estilo flexbox, permitiendo alinear y distribuir los elementos internos.*/
+    align-items: center;
+    justify-content: center;
+    /*Permite centrar los elementos secundarios dentro del contenedoir*/
+}
+
+.home .content-banner {
+    padding: 30px;
+    /*
+    Agrega un espaciado de 30px tanto encima, debajo y los lados, esto
+    aplcia cuando solo se coloca un valor, si se desea asignar diferentes
+    espaciados, tiene que ser de forma horizontal*/
+    background-color: #262829;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 50px;
+    border-style: initial;
+}
+
+.home .content-banner img {
+    margin-top: 40px;
+    display: block;
+    /*Utilizado en elementos que ocupen todo el ancho y que 
+    apilen otros elementos encima o debajo*/
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.home .content-banner h1 {
+    margin-top: 20px;
+    font-size: 42px;
+    font-family: 'Righteous';
+    margin-bottom: 20px;
+}
+
+.home .content-banner h2 {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.home .content-banner .social a {
+    color: white;
+    display: inline-block;
+    /*Propiedad principalmente para 
+    crear elementos como botones o imágenes con dimensiones 
+    específicas que deben alinearse en una fila.*/
+    text-decoration: none;
+    /*El valor none va a eliminar el subrayado azul*/
+    border: 1px solid white;
+    /* Le vamos a dar un estilo a los iconos que importamos de awesome fonts, 
+   con el border y los valores le damos un borde blanco muy delgado */
+    border-radius: 100%;
+    /*el valor 100% har[a que sea un circulo completo*/
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 25px 5px;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.home .content-banner .social a:hover {
+    background-color: #FEB44A;
+}
+
+.about-me {
+    background-color: #212628;
+    color: white;
+    padding: 50px 20px;
+}
+
+.about-me .content-section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-me h2 {
+    font-size: 48px;
+    font-family: 'Volkhov';
+    text-align: center;
+    padding: 20px 1;
+    margin-bottom: 20px;
+}
+
+.about-me .content-section p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    /*Da un margen debajo de un elemento
+    dependiendo el valor que se la asigne, es decir y cito a ChatGPT
+    define cuánto espacio habrá entre la parte inferior de ese elemento y 
+    los elementos que estén debajo de él*/
+}
+
+.about-me .content-section p span {
+
+    color: #FEB44A;
+    font-weight: bold;
+}
+
+.about-me .fil {
+    display: flex;
+    /*Flex es para que el contenido de de las columnas este
+    en una filas*/
+}
+
+.about-me .fil .col {
+    width: 50%;
+    /*Es importante que se asigne desde el inicio de la estiliazcion
+    de las columnas, ya que lo hara es que al ser el 50% va a dividir las filas*/
+}
+
+.about-me .fil .col h3 {
+    font-size: 28px;
+    font-family: 'Volkhov';
+    margin-bottom: 25px;
+}
+
+.about-me .fil .col ul {
+    list-style: none;
+
+}
+
+.about-me .fil .col ul li {
+    margin: 12px 0;
+}
+
+.about-me .fil .col ul li strong {
+    /*Selector para la lista y para el tipo strong*/
+    display: inline-block;
+    color: #FEB44A;
+    width: 130px;
+}
+
+.about-me .fil .col ul li span {
+    /*Selector para el span*/
+    background-color: #FEB44A;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.about-me .fil .col .content-interesets {
+    display: flex;
+    /*Para layouts*/
+    flex-wrap: wrap;
+}
+
+.about-me .fil .col .content-interesets .interests {
+    /*le damos estilo a la columna de intereses, para que el contenido
+    este simetrico.*/
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    /*cuando el selector margin no viene especificado a cual se le va asingar se toma el
+    siguiente criterio
+    0 = arriba
+    15 = derecha
+    15 = abajp
+    0 = izquierda*/
+    display: flex;
+    flex-direction: column;
+    /*nos va a permitir la distribucion de las etiquetas en forma de columnas */
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+}
+
+.about-me .fil .col .content-interesets .interests:hover {
+    background-color: #FEB44A;
+}
+
+.about-me .fil .col .content-interesets .interests i {
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+
+.about-me button {
+    /*Estilizando botones*/
+
+    cursor: pointer;
+    /*Cuando se posiciona en el boton, depende del tipo de cursor que le asignemos es como va a mostrar el cursor*/
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    /*Ajusta el ancho automaticamente dependiendo del contenido */
+    display: block;
+    margin: 10px auto;
+    padding: 10px 22px;
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.6s ease, color 0.6s ease;
+
+    /*Se agrego una transicion para el fondo y otra para el color
+    de las letras, esto debido a que unicamente al colocar "transition: 0.6s
+    se animaba las letras, pero no el fondo, por lo que esta 
+    sintaxis permite eso.
+    La propiedad ease permite a que el el cambio sea gradual y no 
+    se vea sin animacion"*/
+
+}
+
+.about-me button:hover {
+    background-color: #FEB44A;
+    color: #373d44;
+}
+
+/*Section skills*/
+/*Para estilizar esta seccion, se re-utilizo
+el codigo de la seccion about me, solo las clases
+que aplicaron para el mismo formato*/
+.skills {
+    background-color: #252a2e;
+    color: white;
+    padding: 20px 20px;
+}
+
+.skills .content-section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 48px;
+    font-family: 'Volkhov';
+    text-align: center;
+    padding: 20px 1;
+
+}
+
+.skills .fil {
+    display: flex;
+
+}
+
+.skills .fil .col {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fil .col h3 {
+    font-size: 28px;
+    font-family: 'Volkhov';
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/*Estilos para la barra de habilidades */
+.skill {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.skill span {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* Contenedor de la barra de habilidad */
+.bar-skill {
+    width: 100%;
+    /* La barra ocupa el 100% del contenedor */
+    background-color: #c1bfbf;
+    /* Color de fondo de la barra */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Oculta cualquier desbordamiento de contenido */
+    margin-top: 5px;
+}
+
+/* Barra de progreso */
+.progress {
+    height: 25px;
+    /* Altura de la barra de progreso */
+    line-height: 25px;
+    /* Centra verticalmente el texto dentro de la barra */
+    background-color: #F48E25;
+    /* Color de la barra (verde) */
+    text-align: right;
+    /* Alinea el texto hacia la derecha */
+    padding-right: 10px;
+    border-radius: 20px;
+    color: #373d44;
+    font-weight: bold;
+}
+
+/* Clases específicas para los porcentajes */
+.html {
+    width: 30%;
+    /* Ajusta la anchura de la barra al 50% */
+}
+
+.adobe {
+    width: 40%;
+    /* Ajusta la anchura de la barra al 40% */
+}
+
+.SQL {
+    width: 40%;
+}
+
+.com {
+    width: 90%;
+}
+
+.teamwork {
+    width: 70%;
+}
+
+.dedication {
+    width: 90%;
+}
+
+/*Resume*/
+.resume {
+    background-color: #212628;
+    color: white;
+    padding: 20px 20px;
+}
+
+.resume .content-section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.resume h2 {
+    font-size: 48px;
+    font-family: 'Volkhov';
+    text-align: center;
+    padding: 20px 1;
+
+}
+
+.resume .fil {
+    display: flex;
+}
+
+.resume .fil .col {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.resume .fil .col h3 {
+    font-size: 28px;
+    font-family: 'Volkhov';
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.resume .fil .left {
+    border-right: 5px solid #252a2e;
+    /*vamos a dividir las columnas en 2, una para los grados academicos y otra para la
+    experiencia labora, por ello utilizamos la priopiedad border con esos valores
+    para que se genere  un borde que represente una division entre columnas*/
+}
+
+
+.resume .fil .item {
+    /*Cada item/seccion va individual, por lo que se le da un valor
+    a este contenedor "item"*/
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #252a2e;
+
+}
+
+.resume .fil .item .h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resume .fil .item .school {
+    /*Se estiliza el contenido de la columa de escuela*/
+    color: #FEB44A;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+.resume .fil .item .job {
+    /*Se estiliza el contenido de la columna de trabajo*/
+    color: #FEB44A;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+
+
+.resume .fil .item .date {
+    /*Se estiliza la fecha de la escuela*/
+    display: block;
+    color: #FDE07A;
+    margin: 0 0px 10px 0;
+    /*Si se quiere utilizar solo una linea
+    para el margin, los valores se ponen seguidos, donde el primer 
+    valor corresponde al margen TOP-Arriba, LEFT-Izquierda, 
+    BOTTOM-Debajo, RIGTH-Derecha */
+}
+
+.resume .fil .item .datej {
+    /*Se estiliza la fecha del trabajo*/
+    display: block;
+    color: #ffc400;
+    margin: 0 0px 10px 0;
+}
+
+
+
+.resume .fil .item p {
+    line-height: 24px;
+    /*Se utiliza para el interlineado de las
+    lineas, en este caso, del elemento "p"*/
+}
+
+.resume .fil .item p span {
+    /*Este span solo va a afectar lo que este dentro de la etiqueta P*/
+    font-weight: bold;
+    color: #e8a563;
+}
+
+
+/*formulario*/
+.contact {
+    background-color: #252a2e;
+    color: floralwhite;
+    padding: 50px 0;
+}
+
+.contact .content-section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 48px;
+    font-family: 'Volkhov';
+    text-align: center;
+    padding: 20px 1;
+}
+
+.contact .fil {
+    display: flex;
+}
+
+.contact .col {
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+.contact .col input,
+.contact .col textarea {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    margin-bottom: 30px;
+    /*establecemos un margen entre un elemento y otro*/
+    background-color: #99a0a5;
+    color: #000000;
+    font: 20px;
+    transition: opacity 0.3s ease;
+    /* Opacity es para definir como se va a aplicar la transicion
+    y ease define el tipo de animacion, este valor en especifico 
+    hace que s einicie la transicion rapida, tenga una curva a la mitad de bajada
+    y al final se vuelva a acelerar, todo esto en el tiempo que le ajustamos en segundos */
+    opacity: 0.7;
+    /* Opacidad inicial */
+}
+
+.contact .col input:focus,
+.contact .col textarea:focus {
+    /*Este selector "Focus" nos servira para que cuando el usuario le de clic
+    se active los valores de la transicion que colocamos anteriormente*/
+    opacity: 1;
+    /* Opacidad completa cuando el campo está en focus */
+}
+
+.contact button {
+
+    cursor: pointer;
+    /*El elemento cursor nos sirve para asignar que tipo de puntero se aplicara 
+    cuando este se pase por encima del boton, el valor pointer hara que se cambie 
+    a la mano de seleccion*/
+    background-color: transparent;
+    border: 2px solid white;
+    /*le damos un borde blanco al boton*/
+    border-radius: 10px;
+    /*Suavizamos el borde del boton con el valor de 10px*/
+    width: fit-content;
+    /*El valor fit-content ajusta el ancho del bot[on al tamaño del contenido del mismo,
+    es decir, si tiene solo 5 caracteres y este solo mide 10px, se quedara en esa medida*/
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    /*Le damos un padding de 10 y 20px para que el contenido del mismo se encuentre centrado*/
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.6s ease, color 0.6s ease;
+    /*Al igual que en la animacion del formulario, le damos una tranisicion suave para el 
+    coloro de fondo y el color del texto cuando el boton pasa por encima de el.
+    Esto con el fin de darle un efecto gradual al momento de pasar el mouse*/
+}
+
+.contact button:hover {
+    /*El selector hover es para aplicar una accion (que es la que le asignaremos a 
+    continuacion) unicamente cuando el usuario este colocando el mouse sobre esta misma */
+    background-color: #FEB44A;
+    /*Cuando se pase el mouse sobre este boton se va a cambiar el color a este color*/
+}
+
+/*Footer*/
+footer {
+    background-color: #1e2326;
+    color: white;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .social {
+    margin-bottom: 20px;
+}
+
+footer .social a {
+    /*Re utilizamos el codigo de la seccion inicio*/
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 25px 5px;
+    font-size: 20px;
+    transition: background-color 0.6s ease, color 0.6s ease;
+
+}
+
+footer .social a:hover {
+    /*Re utilizamos el mismo valor que en el boton*/
+    background-color: #FEB44A;
+
+}
+
+footer .start {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #F48E25;
+    color: #373d44;
+    position: absolute;
+    left: 48%;
+    /*el valor sera el punto de referencia del elemento 
+    será el 50% del ancho del contenedor.*/
+
+    top: -25px;
+    /*Sirve para moverlo encima de su contenedor, el valor
+        negativo lo eleva*/
+    /* ?  */
+
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 20px;
+
+}
+
+footer .last p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/*Responsive*/
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+
+    nav.responsive ul {
+        display: block !important;
+    }
+
+    nav.responsive ul li {
+        border-bottom: 1px solid white;
+        padding: 10px 0;
+    }
+}
+
+@media screen and(max-width:700px) {
+    .about-me .fil {
+        display: block;
+    }
+
+    .about-me .fil .col {
+        width: fit-content;
+    }
+
+    .skills .fil {
+        display: block;
+    }
+
+    .skills .fil .col {
+        width: 100%;
+    }
+
+    .skills .fil .col .bar-skill {
+        width: 100%;
+    }
+
+    .contact .fil {
+        display: block;
+    }
+
+    .contact .fil .col {
+        width: 100%;
+    }
+}

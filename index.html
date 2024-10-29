@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Esta extension va a permitir agregan iconos de la pagina https://fontawesome.com/icons/-->
+    <link rel="icon" href="code/images/icon.png" type="image/x-icon">
+    <title>Don Ceseñas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--Men[u] encabezado-->
+    <div class="container-header">
+        <header>
+            <div class="logo">
+                <a href="#contact">Daniel</a>
+            </div>
+            <nav id="nav"> <!--Se asignan las opciones que iran en la barra de navegacion
+                todas iran con el href, asignando el valor # se entiende que va a ir 
+                a un elemento en especifico dentro de la misma pagina, seguido se coloca
+                el nombre de la seccion que nosv a a dirigir -->
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#resume">Resume CV</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive"> <!--Este div es para la parte responisva,
+            al momento cambiar su dimension, la barra se muestre minimizada-->
+                <i class="fa-solid fa-bars"></i>
+                <!--Este elemento es el estilo de la barra minimizada-->
+            </div>
+        </header>
+    </div>
+
+    <!--Al ser una landing page, se dividira por secciones-->
+    <!--Sección inicio-->
+    <section id="home" class="home">
+        <!--Como le asignamos como clase Home, al momento de darle clic desde la barra de 
+        navegacion, esta automaticamente nos mandara a esta seccion-->
+        <div class="content-banner">
+            <!--A los divs le asignaremos el nombre referente a lo que estemos trabajando,
+            este div es para la parte de la tarjeta de presentacion-->
+            <div class="content-img">
+                <!--Este div es para la imagen, se recomienda que vaya
+                por separado de la otra clase para que sea mas facil darle
+                estilo-->
+                <img src="code/images/profilepic.png" alt="">
+            </div>
+            <h1>DANIEL CESEÑAS</h1>
+            <h2>Technical Support - Learner Development Web</h2>
+            <div class="social">
+                <!--Div para el contenido de las redes sociales-->
+                <a href="https://www.facebook.com/daniel.cesenas/" target="_blank" rel=" noopener no-referrer"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/doncesenas/" target="_blank" rel="noopener no-referrer"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-cese%C3%B1as-78a648264/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://discord.gg/59SFb9GD" target="_blank" rel="noopener no-referrer"><i
+                        class="fa-brands fa-discord"></i></a>
+                <a href="https://open.spotify.com/user/um99j6a1b7ibystlkei46apa5?si=149c063bc6184ae8" target="_blank"
+                    rel="noopener no-referrer"><i class="fa-brands fa-spotify"></i></i></a>
+                <!--los elementos de importados de la pagina fonts awesome
+                al ser colocados dentro de un elemento <a> deberian de diriginos
+                a donde indiquemos dentro de las comillas, es importante saber que si
+                queremos que al dar clic nos mande a una nueva pagina despues del la
+                referencia hay que agregar los atributos 
+                target="_blank" rel="noopener noreferrer"-->
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion sobre mi-->
+    <section id="about-me" class="about-me">
+        <div class="content-section">
+            <!--Div para separar una seccion de otra-->
+            <h2>About me</h2>
+            <p><span>Hello, i'm Daniel Ceseñas</span> I am 23 years old, an engineering student with a technical degree
+                in computer systems from the Pablo Livas Industrial and Technical High School. I have a passion for
+                technology and software development, which I am currently learning more about. Most of my work
+                experience has been in the field of technical support, but today I want to focus on software
+                development.</p>
+            <div class="fil">
+                <!--Div para la informacion personal e intereses, se subnivela 
+                debajo con un div para cada seccion -->
+                <!--personal info-->
+                <div class="col">
+                    <!--Div para el contenido de la informacion personal-->
+                    <h3>Personal information</h3>
+                    <!--Se utilizara elemento de listas porque el tipo de 
+                    informacion que se esta capturando, en este caso
+                    datos personales en lista-->
+                    <ul>
+                        <li>
+                            <strong>Birthday</strong>
+                            20 july 2001
+                        </li>
+                        <ul>
+                            <li>
+                                <strong>Phone</strong>
+                                +51 81 1470 9322
+                            </li>
+                            <ul>
+                                <li>
+                                    <strong>Email</strong>
+                                    cesenasdaniel@outlook.com
+                                </li>
+                                <ul>
+                                    <li>
+                                        <strong>Website</strong>
+                                        mdanielsj.dev
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <strong>Address</strong>
+                                            Monterrey, Nuevo León, México
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <strong>Job</strong>
+                                            Dev Jr
+                                        </li>
+
+                </div>
+                <!--Interest-->
+                <div class="col">
+                    <!--Div para el contenido de los intereses-->
+                    <h3>Interests</h3>
+                    <div class="content-interesets">
+                        <!--Div para colocar todo el contenido de los intereses,
+                        se agregara un div individual por cada interes para que sea mas
+                        sencilla su estilizacion en CSS-->
+                        <div class="interests">
+                            <!--Div individual para x interes-->
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>GYM</span> <!--
+                            Utilizamos el elemento SPAN porque es el que mejor se 
+                            acopla al diseño, o en pocas palabras, este elemento 
+                            al estilizarlo en el CSS si centra el contenido, caso contrario
+                            al elemento P-->
+                        </div>
+
+                        <div class="interests">
+                            <!--Div individual para x interes-->
+                            <i class="fa-solid fa-code"></i>
+                            <span>Learn Code</span>
+                        </div>
+
+                        <div class="interests">
+                            <!--Div individual para x interes-->
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Photography</span>
+                        </div>
+
+                        <div class="interests">
+                            <!--Div individual para x interes-->
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>Lo-Fi Beats</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Seccion skills-->
+    <section class="skills" id="skills">
+        <div class="content-section">
+            <!--Div para separar una seccion de otra-->
+            <h2>Skills</h2>
+            <div class="fil">
+                <!--Div para el contenido de las skills-->
+                <div class="col">
+                    <!--El contenido se va a distibuir en 2 columnas, 
+                    por lo que se hace este div para la columna izquierda y se 
+                    hara otro para la columna derecha-->
+                    <h3>Technical Skill</h3>
+                    <div class="skill">
+                        <!--Div para la skill individual-->
+                        <span>HTML & CSS</span>
+                        <div class="bar-skill">
+                            <!--Este div es para darle dise;o. Ese div trabajara
+                            como una barra de progreso-->
+                            <div class="progress html">
+                                <span>30%</span>
+                                <!--Aqui va el porcentaje de lo que creemos que sabemos xD-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Adobe Premier</span>
+                        <div class="bar-skill">
+                            <div class="progress adobe">
+                                <span>40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>SQL Server</span>
+                        <div class="bar-skill">
+                            <div class="progress SQL">
+                                <span>40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Soft skills-->
+                <div class="col">
+                    <!--Div de la columna izquierda para la seccion de soft skills-->
+                    <h3>Soft Skill</h3>
+                    <div class="skill">
+                        <span>Comunication</span>
+                        <div class="bar-skill">
+                            <div class="progress com">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Teamwork</span>
+                        <div class="bar-skill">
+                            <div class="progress teamwork">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Dedication</span>
+                        <div class="bar-skill">
+                            <div class="progress dedication">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--seccion resume-->
+    <section class="resume" id="resume">
+        <div class="content-section">
+            <!--Div para separar una seccion de otra-->
+            <h2>Resume Work</h2>
+            <div class="fil">
+                <!--Div global para la seccion-->
+                <div class="col left">
+                    <!--Al igual que las skills, este contenido ira dividido en 2 columnas
+                    una de los grados academicos y otro para la experiencia laboral, por lo que se
+                    hace un div principal para  los grados academicos-->
+                    <h3>Education</h3>
+                    <div class="item l">
+                        <!--Div individual para cada elemento-->
+                        <h4>Technical High School Diploma in Computer Systems</h4>
+                        <span class="school">Esc. Ind. Prepa. Tec. Pablo Livas</span>
+                        <span class="date">2016 - 2019</span>
+                        <p>Six semesters with over 100 credits. I graduated in July 2019 from my institute, where I
+                            gained knowledge in various service sectors, developing skills and abilities in Programming,
+                            Information Security, and System and Web Page Design and Development. This prepared me to
+                            offer comprehensive solutions achieved through analysis, implementation, integration, and
+                            selection of computing products and services. Through this, I acquired professional
+                            competencies, equipped with the necessary foundations to meet the needs of both the public
+                            and private sectors.</p>
+
+                    </div>
+
+                    <div class="item l">
+                        <h4>TI Engineering</h4>
+                        <span class="school">Universidad Metropolitana de Monterrey</span>
+                        <span class="date">2023 - currently</span>
+                        <p>I am currently studying a degree in ICT Engineering, and I am in the 4th semester out of 9. I
+                            hope to graduate in two years so that I can work and focus 100% on software development.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col right">
+                    <!--Div para la columna de la experienca laboral-->
+                    <h3>Work Experience</h3>
+                    <div class="item r">
+                        <!--Div individual para cada elemento-->
+                        <h4>IT assistant</h4>
+                        <span class="job">Alarmas del Norte</span>
+                        <span class="datej">2019 - 2020</span>
+                        <p>Alarmas Del Norte was my first formal job, which I started shortly after graduating from
+                            technical high school. In this role, I performed various activities, primarily serving as an
+                            assistant in the systems department. I conducted preventive maintenance on equipment,
+                            reviewed reports, and participated in the development of a ticketing system, where my main
+                            task was to create a relational database. I did this using <span>SQL in SQL Server
+                                2014</span>, applying
+                            the knowledge I acquired in high school.</p>
+
+                    </div>
+
+                    <div class="item r">
+                        <h4>Quality Control JR</h4>
+                        <span class="job">EHS Labs de Mexico S.A de C.V</span>
+                        <span class="datej">2021 - 2024</span>
+                        <p>
+                            "EHS Labs was my second job and also the one where I have worked the longest. Here, I held
+                            various positions, which I will list from first to last:
+                            <br>
+                            1.- Laboratory Assistant <br>
+                            2.- Report Review Area <br>
+                            3.- Sample Reception and Quality Control <br>
+                            4.- Quality Control regarding the administration of analytical result reports <br>
+
+                            This job taught me a lot, including patience and personal development. On the technical
+                            side, I gained extensive knowledge in the following areas:
+                        <ul>
+                            <li>Procedures required for field sampling by different authorities</li>
+                            <li>Document control</li>
+                            <li>Conducted internal audits in some laboratory departments, including field and laboratory
+                                sampling."</li>
+                        </ul>
+                        </ul>
+                        </p>
+
+                    </div>
+
+                    <div class="item r">
+                        <h4>Technical Support & User training</h4>
+                        <span class="job">Neodata Monterrey S.A de C.V</span>
+                        <span class="datej">2024</span>
+                        <p>At Neodata Monterrey, I worked providing technical support to end-users who utilized the
+                            systems distributed by Neodata. I also <span>conducted training sessions</span> for users
+                            who wanted to
+                            use the system, which lasted between 2 to 4 hours per day.</p>
+
+                    </div>
+
+                    <div class="item r">
+                        <h4>Intern</h4>
+                        <span class="job">Overtech Solutions S.A de C.V</span>
+                        <span class="datej">Currently job</span>
+                        <p>Currently, at Overtech, I work on creating content for social media. I am also revisiting my
+                            previous knowledge in software development, but this time I am focusing on <span>web
+                                development.</span>
+                            This is <span>my first web development project</span>, and so far, I have only learned the
+                            basics of
+                            front-end development, including <span>HTML and CSS</span>, which I have reflected in the
+                            percentage of
+                            knowledge I believe I have. My next goal over the next two weeks is to implement the
+                            <span>DOM</span> on
+                            this page using <span>JavaScript</span> and also <span>learn GIT for version control</span>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion contact me-->
+    <section id="contact" class="contact">
+        <div class="content-section">
+            <!--Div para separar una seccion de otra-->
+            <h2>Contact me</h2>
+            <div class="col">
+                <!--Div para el formulario-->
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email Address">
+                <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="Email Subject">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <button>Send Message</i></button>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <a href="#home" class="start">
+            <i class="fa-solid fa-house"></i>
+            <!--Este elemento nos va a llevar al inicio-->
+        </a>
+        <div class="last">
+            <p>My First Project Web &copy;</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/daniel.cesenas/" target="_blank" rel=" noopener no-referrer"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/doncesenas/" target="_blank" rel="noopener no-referrer"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-cese%C3%B1as-78a648264/" target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://discord.gg/59SFb9GD" target="_blank" rel="noopener no-referrer"><i
+                    class="fa-brands fa-discord"></i></a>
+            <a href="https://open.spotify.com/user/um99j6a1b7ibystlkei46apa5?si=149c063bc6184ae8" target="_blank"
+                rel="noopener no-referrer"><i class="fa-brands fa-spotify"></i></i></a>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>
