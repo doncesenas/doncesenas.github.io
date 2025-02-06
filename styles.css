@@ -600,8 +600,7 @@ que aplicaron para el mismo formato*/
     /* Opacidad completa cuando el campo está en focus */
 }
 
-.contact button {
-
+.contact input[type="submit"] {
     cursor: pointer;
     /*El elemento cursor nos sirve para asignar que tipo de puntero se aplicara 
     cuando este se pase por encima del boton, el valor pointer hara que se cambie 
@@ -611,7 +610,7 @@ que aplicaron para el mismo formato*/
     /*le damos un borde blanco al boton*/
     border-radius: 10px;
     /*Suavizamos el borde del boton con el valor de 10px*/
-    width: fit-content;
+    width: 30%;
     /*El valor fit-content ajusta el ancho del bot[on al tamaño del contenido del mismo,
     es decir, si tiene solo 5 caracteres y este solo mide 10px, se quedara en esa medida*/
     display: block;
@@ -626,11 +625,12 @@ que aplicaron para el mismo formato*/
     Esto con el fin de darle un efecto gradual al momento de pasar el mouse*/
 }
 
-.contact button:hover {
+.contact input[type="submit"]:hover {
     /*El selector hover es para aplicar una accion (que es la que le asignaremos a 
     continuacion) unicamente cuando el usuario este colocando el mouse sobre esta misma */
     background-color: #FEB44A;
     /*Cuando se pase el mouse sobre este boton se va a cambiar el color a este color*/
+    animation: 1s;
 }
 
 /*Footer*/
