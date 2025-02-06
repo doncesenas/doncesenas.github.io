@@ -731,21 +731,25 @@ footer .last p {
     }
 }
 
-@media screen and(max-width:700px) {
+@media screen and (max-width:700px) {
+
     .about-me .fil {
-        display: block;
+        flex-direction: column; /* Se cambia display: block por flex-direction: column para mantener alineación */
+        align-items: center; /* Alinea los elementos al centro */
     }
 
     .about-me .fil .col {
-        width: fit-content;
+        width: 100%; /* Hace que cada columna ocupe el 100% del ancho */
+        text-align: center; /* Centra el texto dentro de cada columna */
     }
 
     .skills .fil {
-        display: block;
+        flex-direction: column; /* Se hace lo mismo que en about-me para mejor responsividad */
     }
 
     .skills .fil .col {
         width: 100%;
+        padding: 10px; /* Agrega espacio entre las columnas */
     }
 
     .skills .fil .col .bar-skill {
@@ -753,10 +757,13 @@ footer .last p {
     }
 
     .contact .fil {
-        display: block;
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact .fil .col {
         width: 100%;
+        padding: 10px;
     }
+
 }
