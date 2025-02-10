@@ -48,7 +48,7 @@ html {
 }
 
 .container-header header .logo a {
-    font-family: 'Carter One';
+    font-family: 'Righteous';
     letter-spacing: 10px;
     /*Hace un espaciado depende del valor que le asignemos, aplica para elementos p y span*/
     font-size: 40px;
@@ -97,7 +97,7 @@ html {
 /*Seccion de inicio*/
 .home {
     background: linear-gradient(to top, rgba(30, 35, 38, .5), rgba(30, 35, 38, 1)),
-        url(code/images/background.jpg);
+        url(code/images/wallpaperss.jpg);
     /*Esta propiedad es para darle un estilo de gradient a la imagen, se coloca lo siguiente
        un gradiente lineal que va de abajo hacia arriba (to top)
        pasa de un tono oscuro semitransparente rgba(30, 35, 38, .5)
@@ -135,7 +135,7 @@ html {
     display: block;
     /*Utilizado en elementos que ocupen todo el ancho y que 
     apilen otros elementos encima o debajo*/
-    width: 80%;
+    width: 70%;
     margin: auto;
     border-radius: 100%;
 }
@@ -268,7 +268,7 @@ html {
     width: 100px;
     height: 100px;
     background-color: #252a2e;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 0 15px 15px 0;
     /*cuando el selector margin no viene especificado a cual se le va asingar se toma el
     siguiente criterio
@@ -421,6 +421,10 @@ que aplicaron para el mismo formato*/
     width: 40%;
 }
 
+.Git {
+    width: 40%;
+}
+
 .com {
     width: 90%;
 }
@@ -431,6 +435,10 @@ que aplicaron para el mismo formato*/
 
 .dedication {
     width: 90%;
+}
+
+.disc {
+    width: 95%;
 }
 
 /*Resume*/
@@ -734,22 +742,28 @@ footer .last p {
 @media screen and (max-width:700px) {
 
     .about-me .fil {
-        flex-direction: column; /* Se cambia display: block por flex-direction: column para mantener alineación */
-        align-items: center; /* Alinea los elementos al centro */
+        flex-direction: column;
+        /* Se cambia display: block por flex-direction: column para mantener alineación */
+        align-items: center;
+        /* Alinea los elementos al centro */
     }
 
     .about-me .fil .col {
-        width: 100%; /* Hace que cada columna ocupe el 100% del ancho */
-        text-align: center; /* Centra el texto dentro de cada columna */
+        width: 100%;
+        /* Hace que cada columna ocupe el 100% del ancho */
+        text-align: center;
+        /* Centra el texto dentro de cada columna */
     }
 
     .skills .fil {
-        flex-direction: column; /* Se hace lo mismo que en about-me para mejor responsividad */
+        flex-direction: column;
+        /* Se hace lo mismo que en about-me para mejor responsividad */
     }
 
     .skills .fil .col {
         width: 100%;
-        padding: 10px; /* Agrega espacio entre las columnas */
+        padding: 10px;
+        /* Agrega espacio entre las columnas */
     }
 
     .skills .fil .col .bar-skill {
